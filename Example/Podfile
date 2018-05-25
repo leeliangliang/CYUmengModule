@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CYUmengModule_Example' do
+  pod 'CYUmengModule', :path => '../'
+
+  target 'CYUmengModule_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

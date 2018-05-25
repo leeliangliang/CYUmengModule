@@ -43,10 +43,10 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6EA1285A3D9289DE3E853A37 /* Pods-CYUmengModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYUmengModule_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CYUmengModule_Example/Pods-CYUmengModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8041F4D714C6B37EA01AFA74 /* Pods_CYUmengModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CYUmengModule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EB604224FF2B8397DD90846 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8EB604224FF2B8397DD90846 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B2BFCC5E11CB31F85D27217C /* Pods_CYUmengModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CYUmengModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAB5A67E60A859FEBA85446B /* CYUmengModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CYUmengModule.podspec; path = ../CYUmengModule.podspec; sourceTree = "<group>"; };
-		DCB5410F950262ED3DD276F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BAB5A67E60A859FEBA85446B /* CYUmengModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CYUmengModule.podspec; path = ../CYUmengModule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DCB5410F950262ED3DD276F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,9 +285,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CYUmengModule_Example/Pods-CYUmengModule_Example-resources.sh",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -319,11 +326,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CYUmengModule_Example/Pods-CYUmengModule_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CYUmengModule/CYUmengModule.framework",
+				"${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYUmengModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGJRouter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

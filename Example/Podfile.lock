@@ -1,0 +1,41 @@
+PODS:
+  - CYUmengModule (0.1.0):
+    - MGJRouter (~> 0.9.0)
+    - UMengUShare/Social/QQ
+    - UMengUShare/Social/Sina
+    - UMengUShare/Social/WeChat
+  - MGJRouter (0.9.3)
+  - UMengUShare/Core (6.4.8.2):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.8.2)
+  - UMengUShare/Social/QQ (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedQQ (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Sina (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/WeChat (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
+
+DEPENDENCIES:
+  - CYUmengModule (from `../`)
+
+EXTERNAL SOURCES:
+  CYUmengModule:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CYUmengModule: a3d62696a035942a9b367dbff985c9802e50e022
+  MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
+  UMengUShare: b1b2084202bef42ac899e218c289504b4c106694
+
+PODFILE CHECKSUM: 4b1df4e8afb6ed9ca3547231cfae9f4c050534e9
+
+COCOAPODS: 1.4.0

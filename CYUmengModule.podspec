@@ -39,4 +39,12 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.ios.dependency    'MGJRouter', '~> 0.9.0'
+  s.ios.dependency    'UMengUShare/Social/QQ'
+  s.ios.dependency    'UMengUShare/Social/WeChat'
+  s.ios.dependency    'UMengUShare/Social/Sina'
+  s.static_framework  =  true
+
+  
 end

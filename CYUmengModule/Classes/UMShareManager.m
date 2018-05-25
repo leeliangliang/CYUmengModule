@@ -12,10 +12,18 @@
 @implementation UMShareManager
 + (void)load{
     
+    [MGJRouter registerURLPattern:@"umeng://regist/:appkey" toObjectHandler:^id(NSDictionary *routerParameters) {
+        [UMSocialManager defaultManager].umSocialAppkey =  routerParameters[@"appkey"];
+        for (NSDictionary *dict in routerParameters[MGJRouterParameterUserInfo]) {
+            [[UMSocialManager defaultManager] setPlaform:[self tranfs:[(NSString *)(dict[@"plat"]) integerValue]] appKey:dict[@"appKey"] appSecret:dict[@"appSecret"] redirectURL:dict[@"redirectURL"]];
+        }
+        return @(true);
+    }];
+    
     [MGJRouter registerURLPattern:@"umeng://thirdlogin/:plat" toObjectHandler:^id(NSDictionary *routerParameters) {
         __block id mResult;
         dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-        [[UMSocialManager defaultManager] getUserInfoWithPlatform:[self tranfs:[(NSString *)(routerParameters[@"plat"]) integerValue]] currentViewController:nil completion:^(id result, NSError *error) {
+        [[UMSocialManager defaultManager] getUserInfoWithPlatform: [self tranfs:[(NSString *)(routerParameters[@"plat"]) integerValue]] currentViewController:nil completion:^(id result, NSError *error) {
             mResult = result;
             dispatch_semaphore_signal(semaphore);
         }];

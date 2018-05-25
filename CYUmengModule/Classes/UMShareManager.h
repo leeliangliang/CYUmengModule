@@ -15,7 +15,6 @@ typedef enum : NSInteger {
 } ThirdLoginPlatform;
 
 typedef void (^UMShareManagerCompletionHandler)(id result,NSError *error);
-typedef void (^Handler)();
 
 @interface UMShareManager : NSObject
 
